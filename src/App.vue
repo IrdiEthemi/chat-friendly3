@@ -351,7 +351,7 @@
 
         <!-- ChatField is made for submitting queries and displaying suggestions -->
         <ChatField ref="input" @submit="send" @listening="stop_feedback" @typing="stop_feedback">
-            <!-- RichSuggesion chips
+           <!-- RichSuggesion chips
                 https://developers.google.com/actions/assistant/responses#suggestion_chips
                 https://cloud.google.com/dialogflow/docs/reference/rest/v2beta1/projects.agent.intents#QuickReplies
                 https://cloud.google.com/dialogflow/docs/reference/rest/v2beta1/projects.agent.intents#Suggestions
@@ -374,6 +374,9 @@
                 :title="suggestion.destinationName || suggestion.text"
                 :uri="suggestion.uri || suggestion.url || suggestion.link"
             />
+            <a 
+            href="https://cloud.google.com/dialogflow/es/docs/entities-system">Visit Dialogflow entities
+            </a>.
         </ChatField>
     </main>
 </template>
