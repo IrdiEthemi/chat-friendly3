@@ -374,9 +374,7 @@
                 :title="suggestion.destinationName || suggestion.text"
                 :uri="suggestion.uri || suggestion.url || suggestion.link"
             />
-            <a 
-            href="https://cloud.google.com/dialogflow/es/docs/entities-system">Visit Dialogflow entities
-            </a>.
+          
         </ChatField>
     </main>
 </template>
