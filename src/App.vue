@@ -510,27 +510,27 @@ export default {
             if (muted) this.stop_feedback()
         }
     },
-    created(){
+     created(){
         /* If history is enabled, the messages are retrieved from sessionStorage */
         if (this.history() && sessionStorage.getItem('message_history') !== null){
             this.messages = JSON.parse(sessionStorage.getItem('message_history'))
         }
-
+ 
         /* Session should be persistent (in case of page reload, the context should stay) */
         if (this.history() && sessionStorage.getItem('session') !== null){
             this.session = sessionStorage.getItem('session')
         }
-
+ 
         else {
             this.session = uuidv1()
             if (this.history()) sessionStorage.setItem('session', this.session)
         }
-
+ 
         /* Cache Agent (this will save bandwith) */
         if (this.history() && sessionStorage.getItem('agent') !== null){
             this.agent = JSON.parse(sessionStorage.getItem('agent'))
         }
-
+ 
         else {
             this.client.get()
             .then(agent => {
@@ -541,6 +541,8 @@ export default {
                 this.error = error.message
             })
         }
+ 
+        this.send({text: "Hello!"})
     },
     methods: {
         send(submission){
