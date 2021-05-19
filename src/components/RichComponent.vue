@@ -20,7 +20,7 @@
 
     @for $i from 1 through 25
         &:nth-child(#{$i}n)
-            animation-delay: #{$i * .80}s
+            animation-delay: #{$i * 1}s
 
     @media screen and (max-width: 720px)
         width: 100%
