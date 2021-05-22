@@ -541,7 +541,7 @@ export default {
                 this.error = error.message
             })
         }
- 
+ /* Changed code so that the Interface begins the interaction */
         this.send({text: "Hello!"})
     },
     methods: {
