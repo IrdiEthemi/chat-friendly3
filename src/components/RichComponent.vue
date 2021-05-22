@@ -20,7 +20,7 @@
 
     @for $i from 1 through 25
         &:nth-child(#{$i}n)
-            animation-delay: #{$i * 3}s
+            animation-delay: #{$i * 1}s // Animation delay lengthened for the bubble animation
 
     @media screen and (max-width: 720px)
         width: 100%
